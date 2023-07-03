@@ -1,0 +1,12 @@
+{
+    "name": "muiTable",
+    "isEnabled": true,
+    "pluginInfraVersion": 2,
+    "source": [
+        "main.6.js"
+    ],
+    "folderName": "MaterialUiTable",
+    "version": "0.2",
+    "skipCompilation": true,
+    "lastUpdate": "2023-06-11T21:07:30.596Z"
+}

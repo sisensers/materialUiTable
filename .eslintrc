@@ -1,0 +1,70 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true,
+          "spread": true,
+          "impliedStrict": true,
+          "arrowFunctions": true,
+          "blockBindings": true,
+          "experimentalObjectRestSpread": true,
+          "legacyDecorators": true
+      }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "process": true,
+    "App": false
+  },
+  "plugins": [
+    "react",
+    "unicorn",
+    "promise"
+  ],
+  "rules": {
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
+    "indent": ["error", 4],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "max-len": ["error", { "code": 120, "ignoreComments": true }],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-constant-condition": "error",
+    "padding-line-between-statements": [
+        "error",
+        { "blankLine": "always", "prev": "*", "next": "return" }
+    ],
+    "react/jsx-props-no-spreading": ["error", {
+        "custom": "ignore"
+    }],
+    "prefer-exponentiation-operator": "error",
+    "unicorn/catch-error-name": "error",
+    "unicorn/error-message": "error",
+    "unicorn/no-array-instanceof": "error",
+    "unicorn/throw-new-error": "error",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/aria-role": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/jsx-fragments": "off",
+    "react/jsx-filename-extension": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off"
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:json/recommended",
+    "plugin:promise/recommended"
+  ]
+}

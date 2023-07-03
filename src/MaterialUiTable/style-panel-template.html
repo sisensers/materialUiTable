@@ -1,0 +1,117 @@
+<div data-ng-controller="plugin-muiTable.controllers.stylerController">
+	<div class="settings-pane-host">
+		<div class="pane-row">
+			<div class="pane-row-title">Row Height</div>
+			<div class="pane-row-holder">
+				<div data-ng-class="{ selected: widget.style.tableSize == 'medium' }"
+					data-ng-model="widget.style.tableSize" class="radio-option-item"
+					ng-click="widget.style.tableSize = 'medium'">
+					<div class="custom-radio-btn" data-ng-class="{ selected: widget.style.tableSize == 'medium' }">
+					</div>
+					<div class="radio-option-separator"></div>
+					<div class="radio-option-caption">Medium</div>
+				</div>
+				<div data-ng-class="{ selected: widget.style.tableSize == 'small' }"
+					data-ng-model="widget.style.tableSize" class="radio-option-item"
+					ng-click="widget.style.tableSize = 'small'">
+					<div class="custom-radio-btn" data-ng-class="{ selected: widget.style.tableSize == 'small' }"></div>
+					<div class="radio-option-separator"></div>
+					<div class="radio-option-caption">Small</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div style="padding:5px"></div>
+	<div class="settings-pane-host">
+		<div class="pane-row">
+			<div class="generic-pane-holder">
+				<div class="generic-pane-title">Column Headers</div>
+				<div class="generic-pane-rows-holder">
+					<div class="intervals-pane-row">
+						<div class="cbox-pane-row slf-back-hov-light" style="width: 100%;">
+							<div class="pane-caption" style="width: unset;">Background</div>
+							<div class="input-wrapper">
+								<input id="columnHeaderBackgroundColor" size="8" style="width: unset;" type="text"
+									data-ng-model="widget.style.columnHeaderBackgroundColor"
+									class="axis-intervals-text slf-back-hover" />
+								<span class="app-icon app-icon--general-restore-usage btn__icon"
+									ng-click="widget.style.columnHeaderBackgroundColor = '#FFFFFF'"
+									name="general-restore-usage"><svg class="app-icon__svg" style="top: auto;">
+										<use xlink:href="#general-restore-usage"></use>
+									</svg></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="generic-pane-rows-holder">
+					<div class="cbox-pane-row" data-ng-click="widget.style.columnHeaderBorderLeft = widget.style.columnHeaderBorderLeft == 0 ? 1 : 0" data-ng-class="{ selected: widget.style.columnHeaderBorderLeft == 1 }">
+						<div class="custom-cbox-btn" data-ng-class="{ selected: widget.style.columnHeaderBorderLeft == 1 }"></div>
+						<div class="pane-separator"></div>
+						<div class="pane-caption">Border Left</div>
+					</div >
+					<div class="cbox-pane-row" data-ng-click="widget.style.columnHeaderBorderRight = widget.style.columnHeaderBorderRight == 0 ? 1 : 0" data-ng-class="{ selected: widget.style.columnHeaderBorderRight == 1 }">
+						<div class="custom-cbox-btn" data-ng-class="{ selected: widget.style.columnHeaderBorderRight == 1 }"></div>
+						<div class="pane-separator"></div>
+						<div class="pane-caption">Border Right</div>
+					</div >
+					<div class="cbox-pane-row" data-ng-click="widget.style.columnHeaderBorderTop = widget.style.columnHeaderBorderTop == 0 ? 1 : 0" data-ng-class="{ selected: widget.style.columnHeaderBorderTop == 1 }">
+						<div class="custom-cbox-btn" data-ng-class="{ selected: widget.style.columnHeaderBorderTop == 1 }"></div>
+						<div class="pane-separator"></div>
+						<div class="pane-caption">Border Top</div>
+					</div >
+					<div class="cbox-pane-row" data-ng-click="widget.style.columnHeaderBorderBottom = widget.style.columnHeaderBorderBottom == 0 ? 1 : 0" data-ng-class="{ selected: widget.style.columnHeaderBorderBottom == 1 }">
+						<div class="custom-cbox-btn" data-ng-class="{ selected: widget.style.columnHeaderBorderBottom == 1 }"></div>
+						<div class="pane-separator"></div>
+						<div class="pane-caption">Border Bottom</div>
+					</div >
+					-->
+
+			</div>
+		</div>
+	</div>
+	
+	<div style="padding:5px"></div>
+	<div class="settings-pane-host">
+		<div class="pane-row">
+			<div class="generic-pane-holder">
+				<div class="generic-pane-title">Table Pagination</div>
+				<div class="generic-pane-rows-holder">
+					<div class="intervals-pane-row">
+						<div class="cbox-pane-row slf-back-hov-light" style="width: 100%;">
+							<div class="pane-caption" style="width: unset;">Background</div>
+							<div class="input-wrapper">
+								<input id="tablePaginationBackgroundColor" size="8" style="width: unset; padding-left: 5px; padding-right: 5px;" type="text"
+									data-ng-model="widget.style.tablePaginationBackgroundColor"
+									class="axis-intervals-text slf-back-hover" />
+								<span class="app-icon app-icon--general-restore-usage btn__icon"
+									ng-click="widget.style.tablePaginationBackgroundColor = '#FFFFFF'"
+									name="general-restore-usage"><svg class="app-icon__svg" style="top: auto;">
+										<use xlink:href="#general-restore-usage"></use>
+									</svg></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="generic-pane-rows-holder">
+					<div class="intervals-pane-row">
+						<div class="cbox-pane-row slf-back-hov-light" style="width: 100%;">
+							<div class="pane-caption" style="width: unset;">Default rows per page</div>
+							<div class="input-wrapper">
+								<input id="tablePaginationRowsPerPage" size="2" style="width: unset; padding-left: 5px; padding-right: 5px;" type="text"
+									data-ng-model="widget.style.tablePaginationRowsPerPage"
+									class="axis-intervals-text slf-back-hover" />
+								<span class="app-icon app-icon--general-restore-usage btn__icon"
+									ng-click="widget.style.tablePaginationRowsPerPage = 10"
+									name="general-restore-usage"><svg class="app-icon__svg" style="top: auto;">
+										<use xlink:href="#general-restore-usage"></use>
+									</svg></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

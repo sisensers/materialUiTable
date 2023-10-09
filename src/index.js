@@ -20,6 +20,7 @@ function StickyHeadTable(props) {
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
+    props.style.tablePaginationRowsPerPage = event.target.value;
     setPage(0);
   };
 
@@ -32,7 +33,9 @@ function StickyHeadTable(props) {
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer
+        sx={{ maxHeight: props.containerHeight }}
+      >
         <Table stickyHeader size={props.style.tableSize} aria-label="sticky table">
           <TableHead>
             <TableRow>
@@ -94,6 +97,7 @@ export function renderTable(container, columns, rows, style) {
       columns={columns}
       rows={rows}
       style={style}
+      containerHeight={container.parentElement.clientHeight-52}
     />
     ,
     container

@@ -180,6 +180,7 @@ prism.registerWidget('muiTable', {
 
         // Clear widget element
         widgetElement.innerHTML = '';
+        widgetElement.setAttribute('style', 'overflow: scroll');
 
         let container1 = document.createElement('div');
         container1.setAttribute('style', 'padding: 5px');

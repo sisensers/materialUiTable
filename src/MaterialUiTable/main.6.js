@@ -195,10 +195,9 @@ prism.registerWidget('muiTable', {
 });
 
 prism.on('beforemenu', function(e, args) {
-
+    var widgType = e.targetScope.widgetType
     var menuName = args.settings.name || 'widget';
-
-    if (menuName == 'widget-metadataitem') {
+    if (widgType == "muiTable" && menuName == 'widget-metadataitem') {
         
         let menuItemAlignColumn = {
             caption: "Align Column",
